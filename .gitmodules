@@ -1,0 +1,3 @@
+[submodule "qcumber-db"]
+	path = qcumber-db
+	url = https://github.com/Graham42/qcumber-db.git

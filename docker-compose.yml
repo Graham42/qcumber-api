@@ -1,0 +1,16 @@
+db:
+  build: ./qcumber-db
+  environment:
+   - POSTGRES_PASSWORD=sekret_pazwrd1
+api:
+  build: ./postgREST
+  environment:
+   - DBHOST=db
+   - DBPASS=sekret_pazwrd1
+   - DBNAME=qcumberdb
+   - V1SCHEMA=queens
+  ports:
+    - "3000:3000"
+  links:
+    - db
+  restart: always
